@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Playlist Presentasi YouTube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>Playlist</h3>
+
+        <input type="text" id="youtube-link" placeholder="Paste link YouTube...">
+        <button onclick="addVideo()">Tambah</button>
+
+        <ul id="playlist"></ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h2 id="video-title">Pilih Video</h2>
+
+        <div class="controls">
+            <button onclick="prevVideo()">⏮ Prev</button>
+            <button onclick="nextVideo()">⏭ Next</button>
+            <button onclick="toggleAutoplay()">▶️ Auto: <span id="auto-status">OFF</span></button>
+            <button id="fsToggle" onclick="toggleFullscreen()">⛶</button>
+            <button id="themeToggle" onclick="toggleTheme()" class="theme-btn">🌙</button>
+        </div>
+
+        <iframe id="player" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<div id="dropOverlay" class="drop-overlay hidden">
+    <div class="drop-box">
+        🎬 Lepaskan Link YouTube Disini
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

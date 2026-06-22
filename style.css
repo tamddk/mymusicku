@@ -1,0 +1,155 @@
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+body.dark .content {
+    background: #1e1e1e;
+}
+
+body.dark .sidebar {
+    background: #000;
+}
+
+body.dark .item {
+    background: #222;
+    color: #fff;
+}
+
+body.dark .item:hover {
+    background: #333;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    background: #181818;
+    color: white;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sidebar input, .sidebar button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+/* PLAYLIST */
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    background: #222;
+    cursor: grab;
+}
+
+.item:hover {
+    background: #333;
+}
+
+.item.active {
+    background: #555;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* CONTENT */
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 70vh;
+}
+
+/* CONTROL BUTTONS */
+.controls button {
+    margin-right: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+#fsToggle {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.drop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.drop-overlay.hidden {
+    display: none;
+}
+
+.drop-box {
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.drop-box.active {
+    border-color: #00ffcc;
+}
