@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Presentation Player</title>
+
+<link rel="stylesheet" href="manual.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>Materi</h3>
+
+        <ul id="playlist">
+            <!-- AUTO RENDER VIA JS -->
+        </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <h2 id="video-title">Pilih Video</h2>
+
+        <!-- CONTROLS -->
+        <div class="controls">
+            <button onclick="prevVideo()">⏮ Prev</button>
+            <button onclick="nextVideo()">⏭ Next</button>
+
+            <button onclick="toggleAutoplay()">
+                ▶️ Auto: <span id="auto-status">OFF</span>
+            </button>
+
+            <button id="fsToggle" onclick="toggleFullscreen()">⛶</button>
+
+            <button id="themeToggle" onclick="toggleTheme()" class="theme-btn">
+                🌙
+            </button>
+        </div>
+
+        <!-- PLAYER -->
+        <div id="playerWrapper" class="player-wrapper">
+
+            <div id="welcomeScreen" class="welcome-screen">
+                <h1>🎓 Selamat Datang</h1>
+                <p>Silakan pilih materi drag menu list untuk memulai video presentasi</p>
+            </div>
+
+            <!-- FLY DROP LAYER -->
+            <div id="dropZone" class="drop-zone">
+                <div class="drop-text">⬇ Drop video disini</div>
+            </div>
+
+            <!-- IFRAME -->
+            <iframe
+                id="player"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="manual.js"></script>
+</body>
+</html>
