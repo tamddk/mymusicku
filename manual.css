@@ -1,0 +1,214 @@
+
+/* =======================
+   BASE
+======================= */
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/*
+
+    WELCOME PAGE
+
+*/
+.welcome-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 5;
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark .welcome-screen {
+    background: #000;
+}
+
+.welcome-screen.hide {
+    display: none;
+}
+
+#player {
+    display: none; /* default hidden */
+}
+
+/* =======================
+   DARK MODE
+======================= */
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+body.dark .content {
+    background: #1e1e1e;
+}
+
+body.dark .sidebar {
+    background: #000;
+}
+
+body.dark .item {
+    background: #222;
+    color: #fff;
+}
+
+body.dark .item:hover {
+    background: #333;
+}
+
+/* =======================
+   LAYOUT
+======================= */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+.sidebar {
+    width: 30%;
+    background: #181818;
+    color: white;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sidebar input,
+.sidebar button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+/* =======================
+   PLAYLIST ITEM
+======================= */
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    background: #222;
+    cursor: grab;
+    transition: 0.2s;
+}
+
+.item:hover {
+    background: #333;
+}
+
+.item.active {
+    background: #555;
+}
+
+/* =======================
+   CONTENT AREA
+======================= */
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+/* =======================
+   PLAYER WRAPPER
+======================= */
+.player-wrapper {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+/* IFRAME */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================
+   FLY DROP LAYER
+========================= */
+.drop-zone {
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.0);
+    transition: 0.2s;
+}
+
+/* ACTIVE SAAT DRAG */
+.drop-zone.active {
+    display: flex;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    border: 2px dashed #00ffcc;
+}
+
+/* TEXT */
+.drop-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* =======================
+   CONTROLS
+======================= */
+.controls button {
+    margin-right: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.theme-btn,
+#fsToggle {
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.theme-btn {
+    right: 10px;
+}
+
+#fsToggle {
+    right: 60px;
+}
+
+/* =======================
+   DELETE BUTTON
+======================= */
+.delete-btn {
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
